@@ -16,7 +16,7 @@ body {
   position: relative;
   width: 100%;
 min-height: 140vh;
-  background-image: url("/images/pv.png");
+  background-image: url("images/pv.png");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;

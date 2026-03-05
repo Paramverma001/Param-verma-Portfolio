@@ -944,13 +944,13 @@ window.addEventListener('load', function() {
   }
 });
 
-// Also hide if it takes too long (safety timeout of 5 seconds)
+// Also hide if it takes too long (safety timeout of 2 seconds)
 setTimeout(function() {
   const spinner = document.getElementById('loading-spinner');
   if (spinner && !spinner.classList.contains('hidden')) {
     spinner.classList.add('hidden');
   }
-}, 5000);
+}, 2000);
 </script>
 
 </body>

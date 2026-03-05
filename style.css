@@ -61,7 +61,7 @@ body {
       rgba(74, 144, 226, 0.1) 330deg 360deg
     );
   border-radius: 50%;
-  animation: iosSpin 1.2s linear infinite;
+  animation: iosSpin 0.8s linear infinite;
   -webkit-mask-image: 
     radial-gradient(circle, transparent 35%, black 65%);
   mask-image: 

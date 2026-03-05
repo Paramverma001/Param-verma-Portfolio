@@ -12,6 +12,11 @@
 </head>
 <body>
 
+<!-- Loading Spinner -->
+<div id="loading-spinner" class="loading-spinner">
+  <div class="spinner-circle"></div>
+</div>
+
  <section class="hero">
 
   <header class="navbar">
@@ -928,6 +933,25 @@ start:"top 85%"
 <button id="back-to-top" class="back-to-top-btn" onclick="lenis.scrollTo(0)">
   ↑
 </button>
+
+<!-- Loading Spinner Controller -->
+<script>
+// Hide loading spinner when page is fully loaded
+window.addEventListener('load', function() {
+  const spinner = document.getElementById('loading-spinner');
+  if (spinner) {
+    spinner.classList.add('hidden');
+  }
+});
+
+// Also hide if it takes too long (safety timeout of 5 seconds)
+setTimeout(function() {
+  const spinner = document.getElementById('loading-spinner');
+  if (spinner && !spinner.classList.contains('hidden')) {
+    spinner.classList.add('hidden');
+  }
+}, 5000);
+</script>
 
 </body>
 </html>

@@ -11,6 +11,46 @@ body {
   overflow-x: hidden;
 }
 
+/* LOADING SPINNER */
+.loading-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+  backdrop-filter: blur(5px);
+}
+
+.loading-spinner.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.spinner-circle {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: iosSpin 1s linear infinite;
+}
+
+@keyframes iosSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* HERO SECTION */
 .hero {
   position: relative;
@@ -20,7 +60,10 @@ body {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   overflow: hidden;
+  will-change: background-image;
+  -webkit-font-smoothing: antialiased;
 }
 
 .hero::before {
